@@ -10,7 +10,7 @@ need_update = True
 def get_screen_image():
     os.system('adb shell screencap -p /sdcard/screen.png')#获取当前界面的截图
     os.system('adb pull /sdcard/screen.png')#下载截图到当前文件夹
-    return numpy.array(Image.open('screen.png'))
+    return numpy.array(Image.open('screen.png'))#获取截图到电脑
 
 
 def jump_to_next(point1,point2):# 计算两点间距离
